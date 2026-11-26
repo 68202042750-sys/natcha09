@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baan Nam Chong | จัดการร้าน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+    <header class="navbar">
+        <div class="logo">🥤 Baan Nam Chong — แอดมิน</div>
+        <nav>
+            <a href="index.html">กลับหน้าร้าน</a>
+        </nav>
+    </header>
+
+    <main class="admin-shell">
+        <section class="admin-panel" id="login-panel">
+            <h1>เข้าสู่ระบบแอดมิน</h1>
+            <p class="section-subtitle">ใช้รหัสผ่านเพื่อจัดการเมนูเครื่องดื่ม</p>
+            <form id="login-form" class="admin-form login-form">
+                <label for="admin-password">รหัสผ่าน</label>
+                <input id="admin-password" type="password" autocomplete="current-password" required>
+                <button class="admin-primary-btn" type="submit">เข้าสู่ระบบ</button>
+                <p id="login-message" class="admin-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="admin-dashboard" id="admin-dashboard" hidden>
+            <div class="admin-heading">
+                <div>
+                    <h1>จัดการเมนูเครื่องดื่ม</h1>
+                    <p class="section-subtitle">เพิ่ม แก้ไข หรือลบเมนูที่แสดงในหน้าร้าน</p>
+                </div>
+                <button id="logout-button" class="admin-secondary-btn" type="button">ออกจากระบบ</button>
+            </div>
+
+            <div class="admin-columns">
+                <section class="admin-panel">
+                    <h2 id="product-form-title">เพิ่มเมนูใหม่</h2>
+                    <form id="product-form" class="admin-form">
+                        <label for="product-name">ชื่อเมนู</label>
+                        <input id="product-name" name="name" maxlength="60" required>
+
+                        <label for="product-price">ราคา (บาท)</label>
+                        <input id="product-price" name="price" type="number" min="0" step="1" required>
+
+                        <label for="product-image">ลิงก์รูปภาพ (ระบบเลือกให้อัตโนมัติ)</label>
+                        <input id="product-image" name="image" type="text" placeholder="https://... หรือ images/ชื่อรูป.png">
+                        <label for="product-image-file">หรือเลือกรูปจากโฟลเดอร์</label>
+                        <input id="product-image-file" type="file" accept="image/*">
+                        <p id="image-suggestion-message" class="admin-hint">พิมพ์ชื่อเมนูเพื่อเลือกรูปให้ตรงกับเครื่องดื่ม</p>
+                        <img id="product-image-preview" class="admin-image-preview" alt="ตัวอย่างรูปเมนู">
+
+                        <div class="admin-form-actions">
+                            <button class="admin-primary-btn" type="submit">บันทึกเมนู</button>
+                            <button id="cancel-edit-button" class="admin-secondary-btn" type="button" hidden>ยกเลิกแก้ไข</button>
+                        </div>
+                        <p id="product-message" class="admin-message" role="status"></p>
+                    </form>
+                </section>
+
+                <section class="admin-panel">
+                    <h2>รายการเมนู</h2>
+                    <div id="admin-product-list" class="admin-product-list"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="catalog.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

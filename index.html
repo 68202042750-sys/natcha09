@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baan Nam Chong | ร้านขายน้ำออนไลน์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar site-navbar">
+        <a class="logo" href="#home">Baan Nam Chong</a>
+        <nav>
+            <a href="#home">หน้าหลัก</a>
+            <a href="#menu">เมนู</a>
+            <a href="#story">เรื่องราว</a>
+            <a href="#location">ที่ตั้ง</a>
+            <a class="nav-order" href="#menu">สั่งเลย</a>
+            <a class="admin-nav" href="admin.html">แอดมิน</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-kicker">FRESH DRINKS · EVERY DAY</p>
+            <h1>Baan Nam Chong</h1>
+            <p>เติมความสดชื่น ด้วยเครื่องดื่มแก้วโปรดของคุณ</p>
+            <a href="#menu" class="hero-btn">สำรวจเมนู</a>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <p class="menu-eyebrow">เมนูแนะนำ</p>
+        <h2>เครื่องดื่มสดชื่นทุกวัน</h2>
+        <p class="section-subtitle">เลือกแก้วโปรด แล้วเติมความสดชื่นให้วันของคุณ</p>
+
+        <div class="menu-grid" id="menu-list"></div>
+    </section>
+
+    <section class="cart-section" id="cart">
+        <div class="cart-heading">
+            <p class="menu-eyebrow">YOUR ORDER</p>
+            <h2>ตะกร้าสินค้า</h2>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-summary">
+            <h3>ยอดรวม <span id="total-price">0</span> บาท</h3>
+            <button class="checkout-btn" onclick="checkout()">
+                สั่งซื้อสินค้า
+            </button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-about" id="story">
+            <p class="footer-brand">Baan Nam Chong</p>
+            <p>เครื่องดื่มแก้วโปรด รสชาติสดชื่น พร้อมเสิร์ฟทุกวัน</p>
+        </div>
+        <div class="footer-location" id="location">
+            <p class="footer-label">BAAN NAM CHONG</p>
+            <p>ร้านเครื่องดื่มออนไลน์ · เลือกเมนูและสั่งซื้อได้ด้านบน</p>
+        </div>
+    </footer>
+
+    <script src="catalog.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
